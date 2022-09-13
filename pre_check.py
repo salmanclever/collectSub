@@ -3,7 +3,7 @@ import os
 import datetime
 from loguru import logger
 
-sub_path = './sub/' #默认存放订阅源的文件夹
+sub_path = '/sub/' #默认存放订阅源的文件夹
 today = datetime.datetime.today()
 path_year = sub_path+str(today.year)
 path_mon = sub_path+path_year+'/'+str(today.month)
