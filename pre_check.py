@@ -3,10 +3,11 @@ import os
 import datetime
 from loguru import logger
 
+sub_path = './sub/' #默认存放订阅源的文件夹
 today = datetime.datetime.today()
-path_year = str(today.year)
-path_mon = path_year+'/'+str(today.month)
-path_yaml = './'+path_mon+'/'+str(today.month)+'-'+str(today.day)+'.yaml'
+path_year = sub_path+str(today.year)
+path_mon = sub_path+path_year+'/'+str(today.month)
+path_yaml = sub_path+path_mon+'/'+str(today.month)+'-'+str(today.day)+'.yaml'
 
 @logger.catch
 def pre_check():
