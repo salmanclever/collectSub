@@ -44,7 +44,8 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
-        git add . :!__pycache__/*
+        git rm -r __pycache__/    # 删除缓存的python文件,自己添加
+        git add .
         git commit -m "🍀 爬取订阅源 $(date '+%Y-%m-%d %H:%M:%S')"
         
     - name: 推送更改
